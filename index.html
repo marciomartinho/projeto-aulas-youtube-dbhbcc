@@ -105,6 +105,21 @@
       var [novo1, novo2, , ,novo4] = arrayTeste; //posições exatas dentro do array. usar ,, vazio para não pegar o indice desejado
       console.log(novo1,novo2,novo3);
 
+      //while
+      var cont = 0;
+      while (cont <= 40){
+	      if (cont % 3 == 0 && cont % 5 == 0) {
+		      console.log('ping pong');
+	      } else if (cont % 3 == 0) {
+		      console.log('ping');
+	      } else if (cont % 5 == 0) {
+		      console.log('pong');
+	      } else {
+		      console.log(cont);
+    		}
+	    cont++;
+      }
+
     </script>
   </body>
 </html>
