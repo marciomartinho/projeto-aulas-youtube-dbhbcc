@@ -13,11 +13,97 @@
       console.log(variavel.toUpperCase());
       console.log(variavel.indexOf('vai'));//retorna o indice da variavel quando encontra o que procurava
       console.log(variavel.indexOf('não'));//quando nao acha nada, retorna -1
+      console.log(variavel.replace('vai','não'));//pega o que acha e troca pelo outro
+      console.log(variavel);//mas nao salva
 
+      //template string ``
+      console.log(`Teste de Template String ${variavel}`);//não precisa do "+" pra concatenar - usa dólar chaves
+      console.log(`Teste de:
+      Template string
+      ${variavel}`)//usado inclusive para dar quebra de linha
 
+      //operações matemáticas
+      var a = 1;
+      a = a + 1;
+      a++;
+      console.log(a);
+      console.log(a++);//primeiro imprime a depois incrementa
+      console.log(a);//agora a vale 4
+      console.log(++a);//agora primeiro incrementa depois imprime
 
+      //booleanos
+      console.log(3 < 5);//expressão que retorna true ou false
+      console.log(4 == 4);//usar == para comparações de igualdade. pois só 1 = é para atribuição
+      console.log('4' == 4);//porém compara apenas valores, mesmo um sendo string e outro numero
+      console.log('4' === 4);//compara se os valores são iguais e os tipos são iguais
+      var nome1 = "josé";
+      var nome2 = "maria";
+      console.log(nome1 == nome2);//tb compara strings
 
+      console.log(!true)//negação do booleano
+      console.log(!!true)//negação da negação
+      //null, undefined, '', false, 0 => são todos valores false em JS
+      console.log(null);//imprime o valor null
+      console.log(!null);//negação do null que é false é true
+      console.log(!!null);//negação da negação passa a ser false e não volta pra null
 
+      console.log(10 && 'JS');//comparação and retorna quando todas as comparações são true e retorna o último true
+      console.log(10 && 'JS' && 7);//retorna o último true
+      console.log(10 && null && 0);//quando somente um é falso retorna o primeiro falso
+
+      //condições
+
+      if(5 > 3){
+        console.log('ok');
+      }
+
+      if(5 > 6){
+        console.log('será?');
+      } else {
+        console.log('ok');
+      }
+
+      if(5 > 6){
+        console.log('será?');
+      } else if (3 < 2) {
+        console.log('será mesmo?');
+      } else {
+        console.log('teste else-if');
+      }
+
+      //array
+
+      var numeros = [4, 5, 6, 7, 8, 9];
+      console.log(numeros);
+      console.log(numeros[0]);//somente o indice 0
+      console.log(numeros.pop());//retira o ultimo indice do array e imprime na tela
+      console.log(numeros);
+      console.log(numeros.join(','));//transforma em string
+      console.log(numeros.push(15));//acrescenta no fim do array
+      console.log(numeros);
+      console.log(numeros.includes(6));//verifica se está dentro do array - retorna true ou false
+      console.log(numeros.indexOf(6));//retorna a posição do indice no array
+      console.log(numeros.indexOf(50));//se nao achar retorna -1
+
+      var array1 = [1,2,3];
+      var array2 = ['a','b','c'];
+      var array3 = array1.concat(array2);//concatenar 2 array
+      console.log(array3);
+      //outra forma mais moderna de concatenar array
+      console.log([array1, array2]);//só que os arrays ficam separados
+      console.log([...array1, ...array2]);//com "..." ele junta tudo em único array
+
+      //array destruction
+      var arrayTeste = ['farinha','ovo','fermento','manteira','leite','chocolate']
+
+      var novo1 = arrayTeste[0];
+      var novo2 = arrayTeste[1];
+      var novo3 = arrayTeste[4];
+
+      console.log(novo1,novo2,novo3);
+          //agora faz assim:
+      var [novo1, novo2, , ,novo4] = arrayTeste; //posições exatas dentro do array. usar ,, vazio para não pegar o indice desejado
+      console.log(novo1,novo2,novo3);
 
     </script>
   </body>
