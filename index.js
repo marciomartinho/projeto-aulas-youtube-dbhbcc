@@ -126,3 +126,11 @@ var { nome: { primeiro } } = novoUsuario2;//aqui extrai a variável primeiro de 
 console.log(nome);
 var { nome: { primeiro: mudeiNome } } = novoUsuario2;//mesma lógica para mudar nome variavel
 console.log(mudeiNome);
+
+function soma (a, b){
+  return function (c){
+    console.log(a + b + c );
+  }
+}
+soma(1,2)(3);
+console.log('teste')
