@@ -134,3 +134,18 @@ function soma (a, b){
 }
 soma(1,2)(3);
 console.log('teste')
+
+function isEmpty(s) {
+	if (s === ""){
+		console.log('true')
+	} else {
+		console.log('false')
+	}
+}
+
+isEmpty("")
+
+function somaX(a = 3 ,b,c = 4){
+  return a + b + c;
+}
+
