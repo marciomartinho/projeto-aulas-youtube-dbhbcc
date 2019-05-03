@@ -29,7 +29,7 @@ function somaTudo(numeros) {
   }
   return total;
 }
-console.log(numeros[1, 2, 3]);
+//console.log(numeros[1, 2, 3]);
 
 function endereco(rua, cidade, estado, ...complementos) {
   console.log(rua);
